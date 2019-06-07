@@ -14,7 +14,18 @@
   </head>
   <body class="bg-dark">
       <main class="container mt-4">
-           <h1>Alo ha Maravilhoso Mundo BootStrap</h1>
+          <section class="row">
+              <div class="col-lg-4 offse-lg-4"
+                   id=alerta">
+                  <div class="alert alert-sucess text-center">
+                      <strong id="resultado">
+                          Olá Maravilhoso Mundo Bootstrap
+                      </strong>
+                  </div>
+                  
+              </div>
+              
+          </section>
       </main>
     
 
