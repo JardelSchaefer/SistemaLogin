@@ -5,4 +5,4 @@ Aula de Introdução de web. Criação de um sistema de login
 layout bootstrap
 
 ##aula02 - 13 de junho de 2019
-Formularios e **validação**
+Formularios e ~~validação~~
