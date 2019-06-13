@@ -15,9 +15,9 @@
   <body class="bg-dark">
       <main class="container mt-4">
           <section class="row">
-              <div class="col-lg-4 offse-lg-4"
+              <div class="col-lg-4 offset-lg-4"
                    id=alerta">
-                  <div class="alert alert-sucess text-center">
+                  <div class="alert alert-success text-center">
                       <strong id="resultado">
                           Olá Maravilhoso Mundo Bootstrap
                       </strong>
