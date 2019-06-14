@@ -14,6 +14,7 @@
   </head>
   <body class="bg-dark">
       <main class="container mt-4">
+          <!-- Alerta -->
           <section class="row">
               <div class="col-lg-4 offset-lg-4"
                    id=alerta">
@@ -26,6 +27,57 @@
               </div>
               
           </section>
+          
+           <!-- Formulário de Login -->
+           
+           <section class="row"> 
+               <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixaLogin" >
+                   <h2 class="text-center mt-2">
+                       Entrada
+                   </h2>
+                   <form action="#" method="post" role="form" class="p-2" id="formLogin">
+                       <div class="form-group">
+                           <input type="text" name="nomeUsuario" class="form-control" 
+                                  placeholder="Nome do usuário" required minlength="5"/>
+                       </div>
+                       
+                       <div class="form-group">
+                           <input type="password" name="senhaUsuario" class="form-control" 
+                                  placeholder="Senha" required minlength="6"/>
+                       </div>
+                       
+                       <div class="form-group">
+                           <div class="custom-control custom-checkbox">
+                               <input type="checkbox" name="lembrar" id="checkLembrar" 
+                                      class="custom-control-input">
+                               <label for="checkLembrar" class="custom-control-label">Lembrar de mim</label>
+                               
+                               <a href="#" id="btnEsqueci" class="float-right"> Esqueci a senha</a>
+                               
+                           </div>
+                           
+                       </div>  
+                       
+                       <div class="form-group">
+                           <input type="submit" name="btnEntrar" value=":: Entrar ::" class="btn btn-primary btn-block">
+                       </div>
+                       <div class="form-group">
+                           <p>
+                                
+                               Novo Usuário?
+                               
+                               <a href="#" id="btnRegistrar" >
+                               <br>Registrar-se aqui.
+                               </a>
+                           </p>
+                       </div>
+                       
+                       
+                   </form>
+               </div>
+           </section>
+          
+          
       </main>
     
 
