@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Sistema de Login</title>
+    <style>
+        #alerta,#caixaRegistro,#caixaSenha{
+            display:none;
+        }
+    </style>
   </head>
   <body class="bg-dark">
       <main class="container mt-4">
@@ -76,7 +81,74 @@
                    </form>
                </div>
            </section>
+           <br> <!--Marotito-->
+           <!--Formulario de registro de novo usuario-->
+           
+           <section class="row">
+               <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixaRegistro">
+                   <h2 class="text-center mt-2">Registrar-se</h2>
+                   <form action="#" method="post" role="form" class="p-2" id="formRegistro">
+                       
+                       <!--Campo nome do Usuario-->
+                       <div class="form-group">
+                           <input type="text" name="nomeCompleto" class="form-control"
+                                  placeholder="Nome completo" required minlength="6">
+                       </div>
+                       
+                        <!--Campo nome do Usuario-->
+                       <div class="form-group">
+                           <input type="text" name="nomeUsuario" class="form-control"
+                                  placeholder="Nome do Usuário" required minlength="6">
+                       </div>
+                        
+                        <!--Campo email do Usuario-->
+                         <div class="form-group">
+                           <input type="text" name="emailUsuario" class="form-control"
+                                  placeholder="Email do Usuário" required minlength="6">
+                       </div>
+                        
+                        <!--Campo senha do Usuario-->
+                         <div class="form-group">
+                             <input type="password" id="senhaUsuario"  class="form-control"
+                                  placeholder="Senha" required minlength="6">
+                       </div>
+                        
+                         <!--Confirmação de senha-->
+                         <div class="form-group">
+                             <input type="password" id="senhaUsuarioConfirmar"  class="form-control"
+                                    placeholder="Confirmar senha" required minlength="6" name="senhaUsuarioConfirmar">
+                       </div>
+                         
+                         <div class="form-group">
+                             <div class="custom-control custom-checkbox">
+                                <input type="checkbox" name="concordar" class="custom-control-input"
+                                       id="checkConcordar">
+                                <label for="checkConcordar" class="custom-control-label">
+                                    eu concordo com os <a href="#"> termos e condições</a>
+                                </label>
+                             </div>
+                         </div>
+                         
+                         <div class="form-group">
+                             <input type="submit" name="btnRegistroUsuario" id="btnRegistroUsuario"
+                                    value=":: Registro ::" class="btn btn-primary btn-block">
+                         </div>
+                         
+                         <!-- Ja registrado-->
+                         <div class="form-group">
+                             <p class="text-center">
+                                 Já registrado?
+                                 <a href="#" id="btnEntrarRegistrado">Entrar aqui. </a>
+                             </p>
+                         </div>
+                         
+                   </form>
+                   
+               </div>
+           </section>
            <br>
+           <!--Formulario de registro de novo usuario-->
+           
            <!-- Formulário de Recuperação de senha -->
            
            <section class="row">
@@ -123,5 +195,31 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        //$(document).ready(function(){})
+        //jQuery
+    $(function(){
+       $("#btnEsqueci").click(function(){
+           $("#caixaLogin").hide();
+           $("#caixaSenha").show();
+       });
+       
+        $("#btnVoltar").click(function(){
+           $("#caixaSenha").hide();
+           $("#caixaLogin").show();
+       });
+       
+        $("#btnRegistrar").click(function(){
+           $("#caixaLogin").hide();
+           $("#caixaRegistro").show();
+       });
+       
+       $("#btnEntrarRegistrado").click(function(){
+           $("#caixaRegistro").hide();
+           $("#caixaLogin").show();
+       });
+       
+    });
+    </script>
   </body>
 </html>
