@@ -241,7 +241,7 @@
        
        //Envio de dados via AJAX
        
-       $("#btnRegistroUsuario").click(function(e){
+                   $("#btnRegistroUsuario").click(function(e){
            
                if(document.querySelector("#formRegistro").checkValidity()){
                    e.preventDefault();
@@ -256,9 +256,47 @@
                        }
                    });
                }
-                       
+                return true;            
     });
-       
+    
+          $("#btnEntrar").click(function(e){
+           
+               if(document.querySelector("#formLogin").checkValidity()){
+                   e.preventDefault();
+                   $.ajax({
+                       
+                       url:'recebe.php',
+                       method:'post',
+                       data:$('#formLogin').serialize()+'&action=entrar',
+                       success:function(resposta){
+                           $('#alerta').show();
+                           $('#resultado').html(resposta);
+                       }
+                   });
+               }
+                 return true;           
+    });
+    
+    
+     $("#btnGerar").click(function(e){
+           
+               if(document.querySelector("#formSenha").checkValidity()){
+                   e.preventDefault();
+                   $.ajax({
+                       
+                       url:'recebe.php',
+                       method:'post',
+                       data:$('#formSenha').serialize()+'&action=gerar',
+                       success:function(resposta){
+                           $('#alerta').show();
+                           $('#resultado').html(resposta);
+                       }
+                   });
+               }
+              return true;         
+    });
+      
+         
        
     });
     
